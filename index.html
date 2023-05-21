@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title></title>
+
+    <!-- CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+
+    <link rel="icon" href="img/favicon.svg">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  </head>
+   
+  
+  <body class="bg-[#F2F2F2] text-[#0A0A0A]">
+
+    <nav class="mt-mobile nav-open fixed z-30 h-screen w-[100%] pt-[80px]">
+      <div class="container">
+          <div class="mt-munu-mb">
+          <ul class="pt-[0] text-[#fff] text-center">
+            <li><a href="https://paycard.link" class="block pb-6 text-xl">Поиск транзакций</a></li>
+            <li><a href="https://paycard.link/fees" class="block pb-6 text-xl">Тарифы</a></li>
+            <li><a href="https://paycard.link/merchant/login" class="block pb-6 text-xl">Вход</a></li>
+          </ul>  
+          
+          
+          <a href="https://paycard.link/wizard" class="block mx-auto py-3 w-[146px] text-[#fff] text-center rounded-[50px] border px-[25px]">
+            Регистрация
+          </a>
+       
+            
+        </div>  
+      </div>  
+    </div>
+  </nav>
+
+    <header class="pt-6 mb-[88px] max-md:mb-[58px]">
+      <div class="container">
+        <div class="flex justify-between items-center">
+          <div class="">
+            <a href="#"><img src="img/logo.svg" alt=""></a>
+          </div>
+          <div class="flex items-center ">
+
+            <div class="burger relative z-40 w-[40px] text-right">
+              <i><svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="18" height="2" fill="#0A0A0A"/>
+                <rect y="9" width="18" height="2" fill="#0A0A0A"/>
+                </svg>
+                
+                
+              </i>
+              <i class="text-right">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 16.5L16.5 1.5M1.5 1.5L16.5 16.5" stroke="#ffffff" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </i> 
+            </div>
+
+
+            <ul class="flex items-center max-lg:hidden" >
+              <li class="pr-7"><a href="https://paycard.link" class="hover:text-[#505BDF]">Поиск транзакций</a></li>
+              <li class="pr-7"><a href="https://paycard.link/fees" class="hover:text-[#505BDF]">Тарифы</a></li>
+              <li class="pr-8"><a href="https://paycard.link/merchant/login" class="hover:text-[#505BDF]">Вход</a></li>
+            </ul>
+
+            <a href="https://paycard.link/wizard" class="btn py-3 w-[146px] text-[#505BDF] text-center max-lg:hidden">
+              Регистрация
+            </a>
+          </div>
+        </div>  
+      </div>
+    </header>
+
+    <section class="bg-[url(../img/bg-main.svg)] bg-no-repeat bg-center h-[970px] relative max-md:bg-[url(../img/first-block2.svg)] max-md:h-[820px]">
+      <div class="container">
+        <h2 class="text-center mb-[28px] text-3xl max-md:text-2xl mb-[15px] max-md:mx-[20px]"> Международные денежные переводы</h2>
+        <div class="flex items-center w-[485px] mx-auto mb-[86px] text-[50px] max-md:text-[32px] max-md:w-[100%] mb-[41px] justify-center max-md:mb-[25px]">
+          <div class="country__title">Россия </div>
+          <div class="mx-4 mt-3"><img class="max-md:w-[34px]" src="img/c-icon.svg" alt=""></div>
+          <div class="country__title">Испания</div>
+
+          
+        </div>
+        <div class="bg-[url(../img/bg-main2.png)] bg-no-repeat h-[548px] w-[750px] m-auto relative max-md:w-[100%] h-[540px] max-md:bg-[url(../img/bg-main3.png)] max-md:w-[303px] max-md:mx-auto">
+
+          <div class="flex pt-[27px] pl-[45px] pr-[45px] max-md:block max-md:pl-[29px] pr-[29px]">
+            <div class="w-[60%] pr-[78px] max-md:w-[100%]" >
+              <div class="text-lg mb-5 max-md:mr-[9px]">Отправляю:</div>
+              <div class="first-block">
+                <div class="left-block">
+                  <div class="flex">
+                    <input type="text" id="amount" value="1250" min="1000" max="20000"/>
+                    <div class="values">
+                      <input type="radio" class="radio" id="value1" name="currency" value="RUB" checked><label for="value1"><svg width="25" height="22" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.32799 18V0.864014H6.83999C8.93599 0.864014 10.488 1.28801 11.496 2.13601C12.52 2.98401 13.032 4.21601 13.032 5.83201C13.032 6.92001 12.784 7.85601 12.288 8.64001C11.792 9.40801 11.056 10 10.08 10.416C9.11999 10.832 7.92799 11.04 6.50399 11.04H4.48799V18H2.32799ZM0.23999 14.736V13.176H8.44799V14.736H0.23999ZM0.23999 11.04V9.21601H5.73599V11.04H0.23999ZM6.19199 9.21601C7.16799 9.21601 7.99199 9.11201 8.66399 8.90401C9.35199 8.69601 9.87999 8.35202 10.248 7.87201C10.616 7.39201 10.8 6.73601 10.8 5.90401C10.8 4.81601 10.464 4.00801 9.79199 3.48001C9.11999 2.95201 8.07199 2.68801 6.64799 2.68801H4.48799V9.21601H6.19199Z" fill="white"/>
+                    </svg></label>
+                      <input type="radio" class="radio" id="value2" name="currency" value="EUR"><label for="value2">€</label>
+                    </div>
+                  </div>
+                  <div id="slider-range-max max-md:hidden"></div>
+                </div>  
+              </div>  
+
+            </div>
+            <div class="w-[40%] max-md:w-[100%]">
+              <div class="max-md:flex items-end">
+                <div class="text-lg mb-5 max-md:mb-1 mr-[9px]">Получаю:</div>
+                <div class="price leading-9" >
+                  <span class="relative">
+                    <em id="currencyResult">145</em><i class="absolute top-[4px] right-[-16px]">*</i></span> 
+                    <em id="currency" class="pl-[15px]">евро</em>
+                </div>
+              </div>  
+              <div class="mt-[20px] text-sm">
+                с учетом комиссий и курсовой <br> разницы на момент расчета
+              </div>
+            </div>
+          </div>
+          <div class="max-md:px-[29px]">
+            <a class="mx-auto block text-center w-[351px] bg-[#505BDF] rounded-[50px] mt-[45px] text-2xl text-white pt-[16px] pb-[17px]  text-2xl mb-[92px] max-md:w-[100%] max-md:text-lg" href="https://paycard.link/wizard">
+              Отправить перевод
+            </a>
+          </div>  
+         
+        </div>
+        <div class="">
+          <div class="image">
+            <img class="image__item-1" src="img/img-1.png" alt="screen-img">
+            <img class="image__item-2" src="img/img-2.png" alt="screen-img">
+            <img class="image__item-3" src="img/img-3.png" alt="screen-img">
+            <img class="image__item-4" src="img/img-4.png" alt="screen-img">
+            <img class="image__item-5" src="img/img-5.png" alt="screen-img">
+            <img class="image__item-6" src="img/img-6.png" alt="screen-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-[115px] max-md:mb-[88px]">
+      <div class="container">
+        <h2 class="text-center mb-[53px] text-3xl max-md:text-2xl mb-[25px]"> Наши клиенты о работе с Paycard:</h2>
+
+        <div class="slider responsive"> 
+          <div>
+            <div class="max-lg:block flex relative">
+              <div class="w-[58%] pr-[5px] max-lg:w-[100%] max-lg:pr-[0]">
+                <div class=" bg-[#FFFFFF] pl-[93px] py-[36px] pr-[21px] rounded-[15px] relative max-xl:h-[380px] max-lg:h-[100%] mb-[5px] max-md:py-[36px] max-md:pl-[26px]">
+                  <div class="text-lg mb-[23px] max-md:text-base ">
+                    Я переехала в Испанию более шести лет назад. Моя работа здесь связана 
+                    с юридическими услугами и каждый месяц я отправляю небольшие суммы родителям в Россию. 
+                    Переводы с испанских карточек в евро на российские карты в рублях давно стали тяжелым испытанием с неизвестным результатом. 
+                    Paycard –  спасательный круг в моей ситуации и я не преувеличиваю. Быстро, понятно, с разумной комиссией и самое главное предсказуемо.
+                  </div>
+                  <div class="swp__title text-lg max-md:text-base">Виктория Милославская</div>
+                  
+                </div>
+                <div class="absolute top-[28px] left-[25px] max-md:top-[-10px]"><img src="img/quo.svg" alt=""></div>
+              </div>
+              <div class="max-lg:w-[100%] w-[42%]">
+                <div class="bg-[#FFFFFF] pl-[93px] py-[36px] pr-[21px] rounded-[15px] relative max-xl:h-[380px] max-lg:h-[100%] max-md:py-[36px] max-md:hidden">
+                  <div class="text-lg mb-[23px] max-md:text-base">
+                    Занимаюсь фрилансом и работаю с клиентами из Испании, проекты небольшие но частые. 
+                    У меня есть испанская карта, но как с нее перевести на российскую я уже сломал всю голову. 
+                    На пейкарде зарегался месяц назад, тестово скинул пару платежей, все отлично, теперь все переводы только здесь.
+                  </div>
+                  <div class="swp__title text-lg max-md:text-base">Дима Гаврилов</div>
+                  <div class="absolute top-[28px] left-[25px]"><img src="img/quo.svg" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="max-lg:block flex relative">
+              <div class="w-[58%] pr-[5px] max-lg:w-[100%] relative max-lg:pr-[0]">
+                <div class=" bg-[#FFFFFF] pl-[93px] py-[36px] pr-[21px] rounded-[15px] relative max-xl:h-[380px] max-lg:h-[100%] mb-[5px] max-md:py-[36px] max-md:pl-[26px]">
+                  <div class="text-lg mb-[23px] max-md:text-base ">
+                    Я переехала в Испанию более шести лет назад. Моя работа здесь связана 
+                    с юридическими услугами и каждый месяц я отправляю небольшие суммы родителям в Россию. 
+                    Переводы с испанских карточек в евро на российские карты в рублях давно стали тяжелым испытанием с неизвестным результатом. 
+                    Paycard –  спасательный круг в моей ситуации и я не преувеличиваю. Быстро, понятно, с разумной комиссией и самое главное предсказуемо.
+                  </div>
+                  <div class="swp__title text-lg max-md:text-base">Виктория Милославская</div>
+                  
+                </div>
+                <div class="absolute top-[28px] left-[25px] max-md:top-[-10px]"><img src="img/quo.svg" alt=""></div>
+              </div>
+              <div class="max-lg:w-[100%] w-[42%]">
+                <div class="bg-[#FFFFFF] pl-[93px] py-[36px] pr-[21px] rounded-[15px] relative max-xl:h-[380px] max-lg:h-[100%] max-md:py-[36px] max-md:hidden">
+                  <div class="text-lg mb-[23px] max-md:text-base">
+                    Занимаюсь фрилансом и работаю с клиентами из Испании, проекты небольшие но частые. 
+                    У меня есть испанская карта, но как с нее перевести на российскую я уже сломал всю голову. 
+                    На пейкарде зарегался месяц назад, тестово скинул пару платежей, все отлично, теперь все переводы только здесь.
+                  </div>
+                  <div class="swp__title text-lg max-md:text-base">Дима Гаврилов</div>
+                  <div class="absolute top-[28px] left-[25px]"><img src="img/quo.svg" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        
+      </div>
+    </section>
+
+    <section class="mb-[90px] max-md:mb-[50px]">
+      <div class="container">
+        <div class="max-lg:block flex">
+          <div class="max-lg:w-[100%] w-[55%] pr-[5px]">
+            <div class="bg-[#dadbef] rounded-[15px] py-[32px] pl-[39px] mb-[5px] relative max-md:pl-[25px] py-[26px]">
+
+              <h2 class="mb-[31px] text-3xl about__title max-md:text-[22px] max-md:mb-[14px] pr-[22px]">Paycard – система платежей для всех </h2>
+              <div class="text-lg mb-[169px] pr-8 max-md:text-base max-md:mb-[119px] ">
+                Получайте и отправляйте деньги из России и СНГ в США и Европу без задержек, скрытых комиссий и ожиданий
+              </div>
+              <div class="w-[248px] absolute bottom-[33px] max-md:w-[168px]">
+                <img src="img/work-icon.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="max-lg:w-[100%] flex w-[45%]">
+            <div class="bg-[#dadbef] rounded-[15px] w-[100%] py-[32px] pl-[31px]  mb-[5px] mr-[5px] relative max-md:pl-[25px] py-[26px]">
+
+              <h2 class="mb-[31px] text-3xl about__title max-md:text-[22px] max-md:mb-[14px]">100 000 + </h2>
+              <div class="text-lg mb-[169px] max-md:text-base max-md:mb-[105px]">
+                Активных пользователей <br> из  26 стран мира
+              </div>
+              <div class="w-[110px] absolute bottom-[33px] max-md:w-[74px] bottom-[22px]">
+                <img src="img/work-icon2.png" alt="">
+              </div>
+            </div>
+
+            <div class="bg-[#e7e7f1] rounded-[15px] w-[100%] py-[32px] pl-[31px] mb-[5px] relative max-md:pl-[25px] py-[26px]">
+
+              <h2 class="mb-[31px] text-3xl about__title max-md:text-[22px] max-md:mb-[14px]">94,7%</h2>
+              <div class="text-lg mb-[169px] max-md:text-base max-md:mb-[105px]">
+                Успешных транзакций <br> наших клиентов
+              </div>
+              <div class="w-[110px] absolute bottom-[33px] max-md:w-[73px] bottom-[22px]">
+                <img src="img/work-icon3.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+
+      <div class="container">
+        <ul class="tabs w-[363px] mx-auto max-md:w-[271px]">
+          <li class="tab-link current tab-radius pb-[40px] pr-[30px] max-md:pr-[14px] pb-[30px]" data-tab="tab-1">
+            <div class="text__tabs text-3xl max-md:text-2xl"> из России</div>
+          </li>
+          <li class="tab-link tab-radius2 pb-[40px] pl-[30px] max-md:pl-[14px] pb-[30px]" data-tab="tab-2">
+            <div class="text__tabs text-3xl max-md:text-2xl"> из Испании </div>
+          </li>
+        </ul>
+      </div>  
+    </section>  
+
+
+
+
+    
+    <section class="planet max-xl:pb-[200px] max-xl:h-[100%] h-[565px]  py-[71px] mb-[94px] relative max-md:pt-[29px] mb-[50px]">
+ 
+      <div class="container">
+
+          
+      <div id="tab-1" class="tab-content current">
+
+
+        <div class="slider country hidden max-md:block">
+          <div>
+            <div class="100% pr-[5px]">
+              <div class="rounded-[15px] pl-[24px] pt-[29px] pb-[18px] pr-[34px] border border-[#8d94ea] h-[424px] max-xl:h-[554px] max-md:h-[100%] mb-[5px]">
+                <div class="text-white text-[22px] mb-[24px] planet__title">
+                  Отправление  переводов
+                </div>
+  
+                <div class="text-white text-base">
+                  Отправляйте денежные переводы на карты европейских банков, используя карты любых российских банков и платежных систем Visa, Mastercard, МИР. <br> <br> 
+  
+                  Мы берем на себе транзитные операции в Евросоюз и гарантируем вам быстрое получение денежных средств с минимально возможной комиссией. 
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <div>
+            <div class="100%">
+              <div class="rounded-[15px] pl-[24px] pt-[29px] pb-[18px] pr-[34px] border border-[#8d94ea] h-[424px] max-xl:h-[554px] max-md:h-[100%] mb-[5px]">
+                <div class="text-white text-[22px] mb-[24px] planet__title">
+                  Отправление переводов
+                </div>
+  
+                <div class="text-white text-base">
+                  Отправляйте денежные переводы на карты европейских банков, используя карты любых российских банков и платежных систем Visa, Mastercard, МИР. <br> <br> 
+  
+                  Мы берем на себе транзитные операции в Евросоюз и гарантируем вам быстрое получение денежных средств с минимально возможной комиссией. 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex pl-[309px] w-[100%] max-xl:pl-0 max-md:hidden">
+          <div class="50% pr-[5px]">
+            <div class="rounded-[15px] pl-[38px] pt-[29px] pb-[18px] pr-[30px] border border-[#8d94ea] h-[424px] max-xl:h-[554px] max-md:h-[100%] mb-[5px]">
+              <div class="text-white text-3xl mb-[40px] planet__title">
+                Отправление <br> переводов
+              </div>
+
+              <div class="text-white text-lg">
+                Отправляйте денежные переводы на карты европейских банков, используя карты любых российских банков и платежных систем Visa, Mastercard, МИР. <br> <br> 
+
+                Мы берем на себе транзитные операции в Евросоюз и гарантируем вам быстрое получение денежных средств с минимально возможной комиссией. 
+              </div>
+            </div>
+          </div>
+
+          <div class="50%">
+            <div class="max-xl:h-[554px] rounded-[15px] pl-[38px] pt-[29px] pb-[18px] pr-[30px] border border-[#8d94ea] h-[424px] max-md:h-[100%]">
+              <div class="text-white text-3xl mb-[40px] planet__title">
+                Отправление <br> переводов
+              </div>
+
+              <div class="text-white text-lg">
+                Отправляйте денежные переводы на карты европейских банков, используя карты любых российских банков и платежных систем Visa, Mastercard, МИР. <br> <br> 
+
+                Мы берем на себе транзитные операции в Евросоюз и гарантируем вам быстрое получение денежных средств с минимально возможной комиссией. 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="tab-2" class="tab-content">
+
+        <div class="slider country hidden max-md:block">
+          <div>
+            <div class="100% pr-[5px]">
+              <div class="rounded-[15px] pl-[24px] pt-[29px] pb-[18px] pr-[34px] border border-[#8d94ea] h-[424px] max-xl:h-[554px] max-md:h-[100%] mb-[5px]">
+                <div class="text-white text-[22px] mb-[24px] planet__title">
+                  Отправление  переводов
+                </div>
+  
+                <div class="text-white text-base">
+                  Отправляйте денежные переводы на карты европейских банков, используя карты любых российских банков и платежных систем Visa, Mastercard, МИР. <br> <br> 
+  
+                  Мы берем на себе транзитные операции в Евросоюз и гарантируем вам быстрое получение денежных средств с минимально возможной комиссией. 
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+          <div>
+            <div class="100%">
+              <div class="rounded-[15px] pl-[24px] pt-[29px] pb-[18px] pr-[34px] border border-[#8d94ea] h-[424px] max-xl:h-[554px] max-md:h-[100%] mb-[5px]">
+                <div class="text-white text-[22px] mb-[24px] planet__title">
+                  Отправление переводов
+                </div>
+  
+                <div class="text-white text-base">
+                  Отправляйте денежные переводы на карты европейских банков, используя карты любых российских банков и платежных систем Visa, Mastercard, МИР. <br> <br> 
+  
+                  Мы берем на себе транзитные операции в Евросоюз и гарантируем вам быстрое получение денежных средств с минимально возможной комиссией. 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex pl-[309px] w-[100%] max-xl:pl-0 max-md:hidden">
+          <div class="50% pr-[5px]">
+            <div class="rounded-[15px] pl-[38px] pt-[29px] pb-[18px] pr-[30px] border border-[#8d94ea] h-[424px] max-xl:h-[554px] max-md:h-[100%] mb-[5px]">
+              <div class="text-white text-3xl mb-[40px] planet__title">
+                Отправление <br> переводов
+              </div>
+
+              <div class="text-white text-lg">
+                Отправляйте денежные переводы на карты российских банков, используя карты международных платежных систем Visa и Mastercard в любой валюте. <br> <br>
+
+Paycard моментально переведет деньги с вашего счета в системе на карту российского банка в рублях и с минимально возможной комиссией.
+              </div>
+            </div>
+          </div>
+
+          <div class="50%">
+            <div class="max-xl:h-[554px] rounded-[15px] pl-[38px] pt-[29px] pb-[18px] pr-[30px] border border-[#8d94ea] h-[424px] max-md:h-[100%]">
+              <div class="text-white text-3xl mb-[40px] planet__title">
+                Отправление <br> переводов
+              </div>
+
+              <div class="text-white text-lg">
+                Получайте переводы с международных карт платежных систем Visa или Mastercard в евро, долларах или иной валюте используя наш сервис платежных ссылок. <br> <br>  
+
+Мы автоматически проведем валютную конверсию в рубль по актуальным курсам.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="text-center mb-[53px] text-3xl max-md:text-2xl mb-[37px]">3 простых шага для начала работы с Paycard:</h2>
+          <div class="max-lg:block w-100 flex mb-[63px] max-md:mb-[45px]">
+            <div class="w-[33.33333333333333%] pr-[5px] max-lg:w-[100%] mb-[5px] ">
+              <div class="bg-white rounded-[15px] pt-[31px] pl-[40px] pb-[37px] pr-[19px] max-xl:h-[470px] max-lg:h-[100%] max-md:pt-[20px] pl-[24px] pb-[20px] pr-[24px]">
+                <div class="flex justify-between mb-[25px] step__title max-md:mb-[0]">
+                  <div class="text-2xl max-md:text-xl">
+                    Регистрация и <br>
+                    подтверждение <br>
+                    личности
+                  </div>
+                  <div class="pt-2">
+                    <img src="img/icon-step.svg" alt="">
+                  </div>
+                </div>  
+                <div class="text-lg max-md:text-base max-md:hidden">
+                  Для регистрации потребуется только ваш адрес электронной почты. <br> <br>
+
+                  Для финального подтверждения необходимо удостоверение личности государственного образца и видео-селфи.
+                </div>
+              </div>
+            </div>
+
+            <div class="w-[33.33333333333333%] pr-[5px] max-lg:w-[100%] mb-[5px]">
+              <div class="bg-white rounded-[15px] pt-[31px] pl-[40px] pb-[37px] pr-[19px] max-xl:h-[470px] max-lg:h-[100%] max-md:pt-[20px] pl-[24px] pb-[20px] pr-[24px]">
+                <div class="flex justify-between mb-[25px] max-md:mb-[0]">
+                  <div class="text-2xl step__title max-md:text-xl">
+                    Пополнение баланса <br> и денежный<br> перевод на карту
+                  </div>
+                  <div class="pt-2">
+                    <img src="img/icon-step2.svg" alt="">
+                  </div>
+                </div>  
+                <div class="text-lg max-md:text-base max-md:hidden">
+                  Пополните баланс с помощью своей банковской карты или криптокошелька.  <br> <br>
+
+                  Введите номер карты получателя, укажите сумму и вы увидите расчет комиссии. Пополнения и переводы происходят мгновенно.
+                </div>
+              </div>
+            </div>
+
+            <div class="w-[33.33333333333333%] pr-[5px] max-lg:w-[100%] ">
+              <div class="bg-white rounded-[15px] pt-[31px] pl-[40px] pb-[37px] pr-[19px] max-xl:h-[470px] max-lg:h-[100%] max-md:pt-[20px] pl-[24px] pb-[20px] pr-[24px]">
+                <div class="flex justify-between mb-[25px] max-md:mb-[0]">
+                  <div class="text-2xl step__title max-md:text-xl">
+                    Получение <br> денежных средств <br> на карту
+                  </div>
+                  <div class="pt-2">
+                    <img src="img/icon-step3.svg" alt="">
+                  </div>
+                </div>  
+                <div class="text-lg max-md:text-base max-md:hidden">
+                  Создайте платежную ссылку указав сумму и валюту к получению. Отправьте ссылку плательщику любым удобным способом. <br><br>
+
+                  Выводите средства на свою банковскую карту или криптокошелек.
+                </div>
+              </div>
+            </div>
+
+          </div>
+          
+
+          <a href="https://paycard.link/wizard" class="mx-auto block w-[351px] bg-[#505BDF] rounded-[50px] text-center text-white pt-[16px] pb-[17px]   text-2xl mb-[92px] max-md:w-[245px] text-lg max-md:mb-[43px]">
+            Регистрация
+          </a>
+      </div>
+    </section>
+
+
+    <section class="mb-[152px] max-md:mb-[52px]">
+      <div class="container">
+        <div class="bg-[#dadbef] rounded-[15px] py-[32px] pl-[42px] mb-[5px] relative max-md:pb-[300px] max-md:mb-[21px] max-md:py-[23px] max-md:pl-[24px]">
+
+            <h2 class="mb-[31px] text-3xl about__title max-md:text-[22px] max-md:mb-[21px]">Удобный интерфейс и отзывчивая <br> техническая поддержка </h2>
+            <div class="w-[623px] text-lg relative max-xl:w-[513px] z-10 max-md:w-[100%] text-base pr-[24px]">
+              Наш интерфейс удивит вас простой и скоростью работы. Все ключевые инструменты всегда под рукой и доступны на любых устройствах. <br><br>
+
+              Если у вас появятся вопросы по работе наших инструментов, техническая поддержка оперативно вам ответит.
+            </div>
+            <div class="w-[515px] absolute bottom-[0] right-[0] max-md:w-[352px] right-[0]">
+              <img src="img/about-icon.png" alt="">
+            </div>
+        </div>
+
+        <div class="flex max-md:block">
+          <div class="w-[50%] pr-[5px] relative max-md:w-[100%] ">
+            <div class="bg-[#ebdb9a] rounded-[15px] py-[32px] pl-[42px] max-md:py-[23px] max-md:pl-[24px] max-md:mb-[21px]">
+              <h2 class="mb-[31px] text-3xl about__title max-md:text-[22px] max-md:mb-[21px]">Обмен валют </h2>
+              <div class="pr-[20px] w-[513px] text-lg mb-[169px] max-xl:w-[100%] max-md:w-[100%] text-base pr-[24px]">
+                Осуществляйте мгновенный обмен ваших денежных средств в разные валюты между своими счетами.
+              </div>
+              <div class="w-[120px] absolute bottom-[0]">
+                <img src="img/about-icon2.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="w-[50%] pr-[5px] relative max-md:w-[100%] ">
+            <div class="bg-[#b0deed] rounded-[15px] py-[32px] pl-[42px] max-md:py-[23px] max-md:pl-[24px] max-md:mb-[21px]">
+              <h2 class="mb-[31px] text-3xl about__title max-md:text-[22px] max-md:mb-[21px]">Криптовалюты </h2>
+              <div class="pr-[20px] w-[513px] text-lg mb-[169px] max-xl:w-[100%] max-md:w-[100%] text-base pr-[24px]">
+                Принимайте платежи в криптовалюте и выводите на свою карту используя наш сервис платежных ссылок.
+              </div>
+              <div class="w-[167px] absolute bottom-[0]">
+                <img src="img/about-icon3.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#e6e6e6] pt-[54px] pb-[36px] max-md:pt-[30px] pb-[22px]">
+      <div class="container">
+        <div class="flex max-lg:text-center max-lg:block max-sm:text-left">
+          <div class="w-[50%] max-lg:w-[100%]">
+            <div class="mb-[48px] max-md:mb-[30px]"><img class="inline-block" src="img/logo-bottom.svg" alt=""></div>
+            <div class="mb-[48px] max-md:mb-[38px"><img class="inline-block" src="img/ft-money.svg" alt=""></div>
+            <div class="copyright text-[#787878] max-lg:hidden">© paycard.link.</div>
+          </div>
+          <div class="flex w-[50%] max-lg:w-[100%]">
+            <div class="w-[50%]">
+              <div class="text-[18px] mb-[18px] text-[#000000] footer__title max-md:text-[16px]">Контакты</div>
+              <a href="#" class="block mb-[15px] text-[#505BDF] ft__item max-md:text-sm max-md:text-[#787878]">paycard.link </a>
+              <a href="mailto:support@paycard.link" class="block text-[#505BDF] ft__item max-md:text-sm max-md:text-[#787878]">support@paycard.link</a>
+              
+            </div>
+            <div class="w-[50%]">
+              <div class="text-[18px] mb-[18px] text-[#000000] footer__title max-md:text-[16px] text-[#787878]">Юридическая информация</div>
+              <ul>
+                <li class="max-md:text-sm">
+                  <a class="block mb-[15px] text-[#505BDF] ft__item max-md:text-[#787878]" href="https://paycard.link/terms-of-use">Правила использования</a>
+                  <a class="block mb-[15px] text-[#505BDF] ft__item max-md:text-[#787878]" href="https://paycard.link/privacy-policy">Политика конфиденциальности</a>
+                  <a class="block mb-[15px] text-[#505BDF] ft__item max-md:text-[#787878]" href="https://paycard.link/compliance-policy">Политика соответствия</a>
+                  <a class="block text-[#505BDF] ft__item max-md:text-[#787878]" href="https://paycard.link/cookie-policy">Персональная информация</a>
+                </li>
+              </ul>
+            </div>
+          </div>  
+   
+        </div>
+
+        <div class="copyright hidden text-[#787878] max-md:block mt-[10px]">© paycard.link.</div>
+      </div>
+    </footer>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script> 
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+      
+
+    <script>
+
+    </script>
+  </body>
+</html>
